@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************
-* Glype is copyright and trademark 2007-2012 UpsideOut, Inc. d/b/a Glype
+* Glype is copyright and trademark 2007-2015 UpsideOut, Inc. d/b/a Glype
 * and/or its licensors, successors and assigners. All rights reserved.
 *
 * Use of Glype is subject to the terms of the Software License Agreement.
@@ -36,7 +36,7 @@ $CONFIG['enable_blockscript'] = false;
 $CONFIG['theme'] = 'default';
 
 # Run plugins on these websites
-$CONFIG['plugins'] = 'facebook.com,youtube.com,myspace.com';
+$CONFIG['plugins'] = 'facebook.com,google.com,hotmail.com,live.com,msn.com,myspace.com,twitter.com,yahoo.com,youtube.com,ytimg.com';
 
 # Temporary directory used by the script. Many features require
 # write permission to the temporary directory. Ensure this
@@ -203,15 +203,15 @@ $CONFIG['tmp_cleanup_logs'] = 0;
 ******************************************************************/
 
 $CONFIG['options']['encodeURL'] = array(
-	'title'	 => 'Encode URL',
-	'desc'	 => 'Encodes the URL of the page you are viewing so that it does not contain the target site in plaintext.',
+	'title'	 => 'Encrypt URL',
+	'desc'	 => 'Encrypts the URL of the page you are viewing so that it does not contain the target site in plaintext.',
 	'default' => true,
 	'force'	 => false
 );
 
 $CONFIG['options']['encodePage'] = array(
-	'title'	 => 'Encode Page',
-	'desc'	 => 'Helps avoid filters by encoding the page before sending it and decoding it with javascript once received. This is not 100% reliable and may break functionality in some browsers.',
+	'title'	 => 'Encrypt Page',
+	'desc'	 => 'Helps avoid filters by encrypting the page before sending it and decrypting it with javascript once received.',
 	'default' => false,
 	'force'	 => false
 );
@@ -254,7 +254,7 @@ $CONFIG['options']['stripJS'] = array(
 $CONFIG['options']['stripObjects'] = array(
 	'title'	 => 'Remove Objects',
 	'desc'	 => 'You can increase page load times by removing unnecessary Flash, Java and other objects. If not removed, these may also compromise your anonymity.',
-	'default' => false,
+	'default' => true,
 	'force'	 => false
 );
 
@@ -265,10 +265,8 @@ $CONFIG['options']['stripObjects'] = array(
 
 # Settings file version for determining compatability with admin
 # tool.
-$CONFIG['version'] = '1.3';
+$CONFIG['version'] = '1.4.13';
 
 //---PRESERVE ME---
 // Anything below this line will be preserved when the admin control panel rewrites
 // the settings. Useful for storing settings that don't/can't be changed from the control panel
-
-$adminDetails['abandonab'] = '4bdc809b37a11e5f67aae4e785796f8e';
